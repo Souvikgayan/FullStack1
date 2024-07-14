@@ -1,0 +1,36 @@
+<%- include("partials/header.ejs") %>
+
+    <h1>Details</h1>
+    <div class="data">
+
+        <% person.forEach(element=> { %>
+            <div class="data-1">
+                <p>
+                    <span>Name : </span>
+                    <%= element.name %>
+                </p>
+                <p>
+                    <span>Age : </span>
+                    <%= element.age %>
+                </p>
+                <p>
+                    <span>Address : </span>
+                    <%= element.address.city %>
+                </p>
+                <p>
+                    <span>Country : </span>
+                    <%= element.address.country %>
+                </p>
+                <p>
+                    <span>Email : </span>
+                    <%= element.contact.email %>
+                </p>
+                <p>
+                    <span>Phone : </span>
+                    <%= element.contact.phone %>
+                </p>
+            </div>
+            <% }); %>
+    </div>
+
+    <%- include("partials/footer.ejs") %>
